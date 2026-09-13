@@ -1,4 +1,4 @@
-import type { Technology } from "../types/technology";
+import type { Technology } from "../../types/technology";
 import { RxStar } from "react-icons/rx";
 import ShowStack from "./ShowStack";
 import { useState } from "react";

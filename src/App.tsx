@@ -3,7 +3,7 @@ import "./App.css";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 
-import { TechnologySection } from "./components/TechnologySection";
+import { TechnologySection } from "./components/Technology/TechnologySection";
 import type { Technology } from "./types/technology";
 import Footer from "./components/Footer";
 const technologyDataPromise = async (): Promise<Technology[]> => {

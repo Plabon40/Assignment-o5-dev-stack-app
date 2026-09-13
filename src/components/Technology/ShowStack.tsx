@@ -1,5 +1,5 @@
 import { RxCross2 } from "react-icons/rx";
-import type { Technology } from "../types/technology";
+import type { Technology } from "../../types/technology";
 
 function ShowStack({
   stack,

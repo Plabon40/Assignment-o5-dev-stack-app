@@ -1,6 +1,6 @@
 import { use } from "react";
 
-import type { Technology } from "../types/technology";
+import type { Technology } from "../../types/technology";
 
 import TechnologyCardComponent from "./TechnologyCard";
 
