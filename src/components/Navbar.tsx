@@ -9,9 +9,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav>
-      <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 items-center px-4 md:px-6 py-3">
-        <img src={Logo} alt="" />
+    <nav className="sticky top-0 z-50 bg-white">
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 items-center px-4 md:px-5 py-3">
+        <a href="">
+          {" "}
+          <img src={Logo} alt="" />
+        </a>
 
         <ul className="hidden  table:text-[13px] md:flex  items-center justify-center gap-4  text-gray-400 whitespace-nowrap">
           <li className="hover:text-[#d91b7e]">
