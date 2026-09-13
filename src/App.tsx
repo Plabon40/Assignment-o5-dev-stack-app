@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 
 import { TechnologySection } from "./components/TechnologySection";
 import type { Technology } from "./types/technology";
+import Footer from "./components/Footer";
 const technologyDataPromise = async (): Promise<Technology[]> => {
   const r = await fetch("/public/Data.json");
   const data = await r.json();
@@ -15,9 +16,10 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <Suspense>
+      <Suspense fallback={<div className="text-center mt-10">Loading...</div>}>
         <TechnologySection technologyDataPromise={technologyDataPromise()} />
       </Suspense>
+      <Footer />
     </>
   );
 }
