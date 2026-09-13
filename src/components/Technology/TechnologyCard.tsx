@@ -2,6 +2,8 @@ import type { Technology } from "../../types/technology";
 import { RxStar } from "react-icons/rx";
 import ShowStack from "./ShowStack";
 import { useState } from "react";
+import { toast } from "react-toastify";
+
 interface technologyCardProps {
   technology: Technology[];
 }
@@ -12,6 +14,7 @@ const TechnologyCardComponent = ({ technology }: technologyCardProps) => {
   const handleAddToStack = (tech: Technology) => {
     const newStack = [...stack, tech];
     setStack(newStack);
+    toast.success(`${tech.name} added to your stack!`);
   };
 
   return (

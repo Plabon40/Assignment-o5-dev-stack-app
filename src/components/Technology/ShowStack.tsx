@@ -1,5 +1,6 @@
 import { RxCross2 } from "react-icons/rx";
 import type { Technology } from "../../types/technology";
+import { toast } from "react-toastify";
 
 function ShowStack({
   stack,
@@ -8,9 +9,11 @@ function ShowStack({
   stack: Technology[];
   setStack: React.Dispatch<React.SetStateAction<Technology[]>>;
 }) {
-  const handleRemoveFromStack = (techId: string) => {
+  const handleRemoveFromStack = (techId: string, techNm: string) => {
     const updatedStack = stack.filter((tech) => tech.id !== techId);
+
     setStack(updatedStack);
+    toast.info(`${techNm} removed from your stack!`);
   };
   return (
     <aside
@@ -48,7 +51,7 @@ function ShowStack({
                 </div>
               </div>
 
-              <button onClick={() => handleRemoveFromStack(tech.id)}>
+              <button onClick={() => handleRemoveFromStack(tech.id, tech.name)}>
                 <RxCross2 className="text-2xl text-red-500 " />
               </button>
             </div>

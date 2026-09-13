@@ -26,6 +26,7 @@ export const TechnologySection = ({
           Pick one technology per category to build your ideal stack.
         </p>
       </section>
+
       <TechnologyCardComponent technology={technology} />
     </div>
   );
