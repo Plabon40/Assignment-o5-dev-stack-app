@@ -1,33 +1,81 @@
+import { RxHamburgerMenu } from "react-icons/rx";
 import Logo from "../assets/logo-text.png";
 const Navbar = () => {
   return (
-    <nav className="">
-      <div className="container mx-auto grid grid-cols-3 gap-3  items-center px-6 py-3">
+    // <nav className="">
+    //   <div className="container mx-auto grid grid-cols-3 gap-3  items-center px-6 py-3">
+    //     <img src={Logo} alt="" />
+    //     <ul className="flex items-cente  gap-4 text-gray-400">
+    //       <li className="text-[#d91b7e]">
+    //         <a href="">Home</a>
+    //       </li>
+    //       <li>
+    //         <a href="">Technologies</a>
+    //       </li>
+    //       <li>
+    //         <a href="">Projects</a>
+    //       </li>
+    //       <li>
+    //         <a href="">About</a>
+    //       </li>
+    //       <li>
+    //         <a href="">Contact</a>
+    //       </li>
+    //     </ul>
+
+    //     <div className="flex justify-end items-center gap-3 ">
+    //       <button className="text-gray-700 hover:text-purple-600">
+    //         Sign In
+    //       </button>
+    //       <button className="btn  bg-[#d91b7e] btn-active btn-secondary rounded-4xl">
+    //         Sign Up
+    //       </button>
+    //     </div>
+    //   </div>
+    // </nav>
+    <nav>
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 items-center px-4 md:px-6 py-3">
+        {/* Logo */}
         <img src={Logo} alt="" />
-        <ul className="flex items-cente  gap-4 text-gray-400">
+
+        {/* Navigation */}
+        <ul className="hidden text-[16px]  md:flex  items-center justify-center gap-4  text-gray-400 whitespace-nowrap">
           <li className="text-[#d91b7e]">
             <a href="">Home</a>
           </li>
+
           <li>
             <a href="">Technologies</a>
           </li>
+
           <li>
             <a href="">Projects</a>
           </li>
+
           <li>
             <a href="">About</a>
           </li>
+
           <li>
             <a href="">Contact</a>
           </li>
         </ul>
 
-        <div className="flex justify-end items-center gap-3 ">
+        {/* Sign in / Sign up */}
+        <div className="hidden md:flex justify-end items-center gap-3 whitespace-nowrap">
           <button className="text-gray-700 hover:text-purple-600">
             Sign In
           </button>
-          <button className="btn  bg-[#d91b7e] btn-active btn-secondary rounded-4xl">
+
+          <button className="btn bg-[#d91b7e] btn-active btn-secondary rounded-4xl">
             Sign Up
+          </button>
+        </div>
+
+        {/* Hamburger placeholder */}
+        <div className="flex justify-end md:hidden ">
+          <button className="text-2xl">
+            <RxHamburgerMenu />
           </button>
         </div>
       </div>
