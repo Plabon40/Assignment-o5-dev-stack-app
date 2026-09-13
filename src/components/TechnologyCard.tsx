@@ -1,58 +1,82 @@
 import type { Technology } from "../types/technology";
 import { RxStar } from "react-icons/rx";
+import ShowStack from "./ShowStack";
+import { useState } from "react";
 interface technologyCardProps {
   technology: Technology[];
 }
 
 const TechnologyCardComponent = ({ technology }: technologyCardProps) => {
+  const [stack, setStack] = useState<Technology[]>([]);
+
+  const handleAddToStack = (tech: Technology) => {
+    const newStack = [...stack, tech];
+    setStack(newStack);
+  };
+
   return (
-    <div className="grid grid-cols-[2fr] items-center">
-      <div className="container mx-auto p-6 md:px-6 lg:px-8 mt-10">
-        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {technology.map((tech: Technology) => {
-            return (
+    <div className="container mx-auto px-4 py-4 sm:px-6 lg:px-6 lg:py-10 ">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 ">
+        <section className="lg:col-span-2 ">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3 ">
+            {technology.map((tech: Technology) => (
               <div
                 key={tech.id}
-                className="w-full border border-gray-200 rounded-2xl flex flex-col gap-6 p-6 min-h-[470px]"
+                className="flex min-h-[255px] flex-col rounded-2xl border border-gray-200 ]  p-4"
               >
-                <div className="flex justify-between items-center">
-                  <img className="w-10 h-10" src={tech.icon} alt={tech.name} />
+                <div className="flex items-center justify-between">
+                  <img
+                    src={tech.icon}
+                    alt={tech.name}
+                    className="h-8 w-8 object-contain"
+                  />
 
-                  <span className="inline-flex px-4 h-[30px] items-center justify-center border border-blue-400 rounded-full text-blue-400">
+                  <span
+                    className={`rounded-full border px-3 py-1.5 text-xs font-medium ${tech.color}`}
+                  >
                     {tech.badge}
                   </span>
                 </div>
 
-                <h2 className="font-bold text-2xl sm:text-3xl">{tech.name}</h2>
+                <h2 className="mt-4 text-xl font-bold text-gray-900">
+                  {tech.name}
+                </h2>
 
-                <p className="text-gray-400">{tech.description}</p>
+                <p className="mt-2 line-clamp-3 text-[12px]  text-gray-400">
+                  {tech.description}
+                </p>
 
-                <div className="flex flex-wrap justify-between gap-2 items-center">
-                  <h2 className="inline-flex px-3 h-[30px] items-center justify-center bg-gray-100 rounded">
+                <div className="mt-4 border-t border-gray-100" />
+
+                <div className="mt-3 mb-4 flex text-[11px] flex-wrap items-center justify-between  text-xs">
+                  <span className="rounded bg-gray-100 px-2 py-2 text-gray-600">
                     {tech.category}
-                  </h2>
+                  </span>
 
-                  <h2 className="text-gray-400">{tech.difficulty}</h2>
+                  <span className="text-gray-400">{tech.difficulty}</span>
 
-                  <span className="flex items-center gap-1">
-                    <RxStar className="text-orange-300" />
+                  <span className="flex items-center gap-1 text-gray-700">
+                    <RxStar className="text-orange-300 " />
                     {tech.rating}
                   </span>
                 </div>
 
-                <button className="mt-auto btn btn-neutral w-full">
-                  Add to Stock
+                <button
+                  onClick={() => handleAddToStack(tech)}
+                  disabled={stack.some((item) => item.id === tech.id)}
+                  type="button"
+                  className="btn btn-neutral mt-auto h-9 min-h-9 w-full rounded-lg text-sm hover:bg-gray-100 hover:text-black disabled:bg-gray-200 disabled:text-gray-400 "
+                >
+                  {stack.some((item) => item.id === tech.id)
+                    ? "Added"
+                    : "Add to Stack"}
                 </button>
               </div>
-            );
-          })}
-        </div>
-      </div>
+            ))}
+          </div>
+        </section>
 
-      <div className="  w-[300px] h-[250px] border border-gray-200 rounded-2xl ">
-        <h2 className="text-3xl">Your Stack</h2>
-        <p className="text-gray-400">No technologies selected yet</p>
-        <span className="">Your stack is empty</span>
+        <ShowStack stack={stack} setStack={setStack} />
       </div>
     </div>
   );

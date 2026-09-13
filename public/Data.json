@@ -7,7 +7,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/React.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Popular",
+    "color": "rounded-full border px-3 py-1.5 text-xs font-medium border-blue-200  text-blue-500 "
   },
   {
     "id": "postgresql",
@@ -17,7 +18,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Standard"
+    "badge": "Standard",
+    "color": "rounded-full border px-3 py-1.5 text-xs font-medium border-yellow-200  text-yellow-500 "
   },
   {
     "id": "javascript",
@@ -27,7 +29,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "color": "rounded-full border px-3 py-1.5 text-xs font-medium border-green-200  text-green-500 "
   },
   {
     "id": "typescript",
@@ -37,7 +40,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Trending"
+    "badge": "Trending",
+    "color": "rounded-full border px-3 py-1.5 text-xs font-medium border-blue-200  text-blue-500 "
   },
   {
     "id": "nodejs",
@@ -47,7 +51,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Popular",
+    "color": "rounded-full border px-3 py-1.5 text-xs font-medium border-green-200  text-green-500 "
   },
   {
     "id": "mongodb",
@@ -57,7 +62,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Popular",
+    "color": "rounded-full border px-3 py-1.5 text-xs font-medium border-yellow-200  text-yellow-500 "
   },
   {
     "id": "tailwindcss",
@@ -67,7 +73,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
-    "badge": "Trending"
+    "badge": "Trending",
+    "color": "rounded-full border px-3 py-1.5 text-xs font-medium border-blue-200  text-blue-500 "
   },
   {
     "id": "nextjs",
@@ -77,7 +84,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Modern"
+    "badge": "Modern",
+    "color": "rounded-full border px-3 py-1.5 text-xs font-medium border-purple-200  text-purple-500 "
   },
   {
     "id": "expressjs",
@@ -87,7 +95,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Express.svg",
     "rating": 4.7,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Popular",
+    "color": "rounded-full border px-3 py-1.5 text-xs font-medium border-green-200  text-green-500 "
   },
   {
     "id": "git",
@@ -97,7 +106,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Git.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "color": "rounded-full border px-3 py-1.5 text-xs font-medium border-green-200  text-green-500 "
   },
   {
     "id": "github",
@@ -107,7 +117,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/GitHub.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "color": "rounded-full border px-3 py-1.5 text-xs font-medium border-blue-200  text-blue-500 "
   },
   {
     "id": "docker",
@@ -117,6 +128,12 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Docker.svg",
     "rating": 4.7,
     "difficulty": "Intermediate",
-    "badge": "DevOps"
+    "badge": "DevOps",
+    "color": "rounded-full border px-3 py-1.5 text-xs font-medium border-red-200  text-red-500 "
   }
+
+
+
 ]
+
+
