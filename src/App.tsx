@@ -9,7 +9,7 @@ import type { Technology } from "./types/technology";
 import Footer from "./components/Footer";
 import { Suspense } from "react";
 const technologyDataPromise = async (): Promise<Technology[]> => {
-  const r = await fetch("/public/Data.json");
+  const r = await fetch("/Data.json");
   const data = await r.json();
   return data;
 };
